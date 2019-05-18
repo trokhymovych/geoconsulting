@@ -1,0 +1,358 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+{{super()}}
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static', filename='css/logo_1.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/buttons_geo.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/buttons_geo_small.css')}}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="{{url_for('static', filename='css/fontawesome/css/all.css')}}" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+body {
+  background-color: #12202a;
+}
+.hide {
+  display: none;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  function show_coffee(){
+    document.getElementById('div_coffee').style.display ='block';
+    document.getElementById('div_banks').style.display ='none';
+    document.getElementById('div_restaurants').style.display ='none';
+    document.getElementById('div_grocery').style.display ='none';
+  }
+
+  function show_banks(){
+    document.getElementById('div_coffee').style.display ='none';
+    document.getElementById('div_banks').style.display ='block';
+    document.getElementById('div_restaurants').style.display ='none';
+    document.getElementById('div_grocery').style.display ='none';
+  }
+
+  function show_restaurants(){
+    document.getElementById('div_coffee').style.display ='none';
+    document.getElementById('div_banks').style.display ='none';
+    document.getElementById('div_restaurants').style.display ='block';
+    document.getElementById('div_grocery').style.display ='none';
+  }
+
+  function show_grocery(){
+    document.getElementById('div_coffee').style.display ='none';
+    document.getElementById('div_banks').style.display ='none';
+    document.getElementById('div_restaurants').style.display ='none';
+    document.getElementById('div_grocery').style.display ='block';
+  }
+
+
+
+
+
+
+  function show_coffee_data(){
+    document.getElementById('div_data_coffee').style.display = 'block';
+    document.getElementById('div_model_coffee').style.display = 'none';
+    document.getElementById('div_result_coffee').style.display = 'none';
+
+  }
+
+  function show_coffee_model(){
+    document.getElementById('div_data_coffee').style.display = 'none';
+    document.getElementById('div_model_coffee').style.display = 'block';
+    document.getElementById('div_result_coffee').style.display = 'none';
+  }
+
+  function show_coffee_result(){
+    document.getElementById('div_data_coffee').style.display = 'none';
+    document.getElementById('div_model_coffee').style.display = 'none';
+    document.getElementById('div_result_coffee').style.display = 'block';
+  }
+
+
+
+
+  function show_banks_data(){
+
+    document.getElementById('div_data_banks').style.display = 'block';
+    document.getElementById('div_model_banks').style.display = 'none';
+    document.getElementById('div_result_banks').style.display = 'none';
+
+  }
+
+  function show_banks_model(){
+
+    document.getElementById('div_data_banks').style.display = 'none';
+    document.getElementById('div_model_banks').style.display = 'block';
+    document.getElementById('div_result_banks').style.display = 'none';
+  }
+
+  function show_banks_result(){
+
+    document.getElementById('div_data_banks').style.display = 'none';
+    document.getElementById('div_model_banks').style.display = 'none';
+    document.getElementById('div_result_banks').style.display = 'block';
+  }
+
+
+
+  function show_restaurants_data(){
+
+    document.getElementById('div_data_restaurants').style.display = 'block';
+    document.getElementById('div_model_restaurants').style.display = 'none';
+    document.getElementById('div_result_restaurants').style.display = 'none';
+
+  }
+
+  function show_restaurants_model(){
+
+    document.getElementById('div_data_restaurants').style.display = 'none';
+    document.getElementById('div_model_restaurants').style.display = 'block';
+    document.getElementById('div_result_restaurants').style.display = 'none';
+  }
+
+  function show_restaurants_result(){
+
+    document.getElementById('div_data_restaurants').style.display = 'none';
+    document.getElementById('div_model_restaurants').style.display = 'none';
+    document.getElementById('div_result_restaurants').style.display = 'block';
+  }
+
+
+
+  function show_grocery_data(){
+
+    document.getElementById('div_data_grocery').style.display = 'block';
+    document.getElementById('div_model_grocery').style.display = 'none';
+    document.getElementById('div_result_grocery').style.display = 'none';
+
+  }
+
+  function show_grocery_model(){
+
+    document.getElementById('div_data_grocery').style.display = 'none';
+    document.getElementById('div_model_grocery').style.display = 'block';
+    document.getElementById('div_result_grocery').style.display = 'none';
+  }
+
+  function show_grocery_result(){
+
+    document.getElementById('div_data_grocery').style.display = 'none';
+    document.getElementById('div_model_grocery').style.display = 'none';
+    document.getElementById('div_result_grocery').style.display = 'block';
+  }
+
+
+</script>
+{{super()}}
+{% endblock %}
+
+<!----------------------------------------------------------- -->
+
+{% block content %}
+        <div style="background-image: url(static/img/background.png);" style="margin-top: -1.5em;">
+
+          <div class="header_logo" style="margin-left: 3em;"> <!--style="background-color: black; width: 100%; height: 6em; margin-top: -0.8em;" -->
+            <img src="static/img/logo.png"  alt='logo' style="height: 5em;">
+
+            <h1 style="font-size: 3.5em; color: white;"> <b>GeoConsulting.ai</b></h1>
+
+          </div>
+        <div class="container" >
+
+          <div class="middle">
+            <h1>Venue selection</h1>
+
+
+            <label>
+
+            <input type="radio" name="radio" onclick="show_coffee();" checked/>
+            <div class="coffe-shops box">
+              <span>Coffee shops</span>
+            </div>
+          </label>
+
+
+            <label>
+            <input type="radio" name="radio" onclick="show_banks();"/>
+            <div class="banks box">
+              <span>Banks</span>
+            </div>
+          </label>
+
+            <label>
+            <input type="radio" name="radio" onclick="show_restaurants();"/>
+            <div class="restaurants box">
+              <span>Restaurants</span>
+            </div>
+          </label>
+
+            <label>
+            <input type="radio" name="radio" onclick="show_grocery();"/>
+            <div class="grocery box">
+              <span>Grocery</span>
+            </div>
+          </label>
+
+          </div>
+
+
+          <div class="middle_2">
+            <h1>Demonstration</h1>
+            <label>
+            <input type="radio" name="radio-2" onclick="show_coffee_data(); show_restaurants_data(); show_banks_data(); show_grocery_data();" checked/>
+            <div class="front-end box">
+              <span>Data</span>
+            </div>
+          </label>
+
+            <label>
+            <input type="radio" name="radio-2" onclick="show_coffee_model(); show_restaurants_model(); show_banks_model(); show_grocery_model();" />
+            <div class="front-end box">
+              <span>Model</span>
+            </div>
+          </label>
+
+            <label>
+            <input type="radio" name="radio-2" onclick="show_coffee_result(); show_restaurants_result(); show_banks_result(); show_grocery_result();"/>
+            <div class="back-end box">
+              <span>Results</span>
+            </div>
+          </label>
+
+          </div>
+
+    </div>
+    <div style="height: 3em; width: 100%;" >
+    </div>
+
+    </div>
+
+<!-- Coffee shop --------------------------------------- -->
+
+<div id="div_coffee" >
+
+  <!--<h2> Coffee </h2> -->
+  <div id="div_data_coffee">
+    <h2>Data for coffee shops</h2>
+    <iframe src="{{url_for('plot', name='coffee_shops')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    margin-right: auto; "></iframe>
+
+  </div>
+
+  <div id="div_model_coffee" style="display: none">
+    <h2>Model</h2>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='metrics_chart')}}" frameborder=0 style="width: 100%; height:35em; "></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='metrics_chart')}}" frameborder=0 style="width: 100%; height:35em; "></iframe>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 2em;">
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='metrics_chart')}}" frameborder=0 style="width: 100%; height:35em; "></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='metrics_chart')}}" frameborder=0 style="width: 100%; height:35em; "></iframe>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="div_result_coffee" style="display: none">
+    <h2>Result for coffee shops</h2>
+    <iframe src="{{url_for('plot', name='coffee_shops')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    margin-right: auto; "></iframe>
+  </div>
+
+</div>
+
+<!-- Banks --------------------------------------- -->
+
+<div id="div_banks" style="display: none">
+
+  <div id="div_data_banks">
+    <h2>Data for banks</h2>
+    <iframe src="{{url_for('plot', name='banks_map')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    margin-right: auto; "></iframe>
+  </div>
+
+  <div id="div_model_banks" style="display: none">
+    <h2>Model</h2>
+  </div>
+
+  <div id="div_result_banks" style="display: none">
+    <h2>Result</h2>
+  </div>
+
+
+
+</div>
+
+<!-- Restaurants --------------------------------------- -->
+
+<div id="div_restaurants" style="display: none">
+
+  <h2> Restaurants </h2>
+  <div id="div_data_restaurants">
+    <h2>Data</h2>
+  </div>
+
+  <div id="div_model_restaurants" style="display: none">
+    <h2>Model</h2>
+  </div>
+
+  <div id="div_result_restaurants" style="display: none">
+    <h2>Result</h2>
+  </div>
+
+
+</div>
+
+<!-- Grocery --------------------------------------- -->
+<div id="div_grocery" style="display: none">
+
+  <h2> Grocery </h2>
+  <div id="div_data_grocery">
+    <h2>Data</h2>
+  </div>
+
+  <div id="div_model_grocery" style="display: none">
+    <h2>Model</h2>
+  </div>
+
+  <div id="div_result_grocery" style="display: none">
+    <h2>Result</h2>
+  </div>
+
+
+</div>
+
+
+<!-- Banks --------------------------------------- -->
+
+
+
+
+{% endblock %}
