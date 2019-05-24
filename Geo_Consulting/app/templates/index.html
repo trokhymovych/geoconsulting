@@ -250,30 +250,30 @@ h2 {
 
   <!--<h2> Coffee </h2> -->
   <div id="div_data_coffee">
-    <h2>Data for coffee shops</h2>
-    <iframe src="{{url_for('plot', name='coffee_shops')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    <h2>Data observation for coffee shops</h2>
+    <iframe src="{{url_for('plot', name='coffee')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
     margin-right: auto; "></iframe>
 
   </div>
 
   <div id="div_model_coffee" style="display: none">
-    <h2>Model</h2>
+    <h2>Models comparison</h2>
 
     <div class="row">
       <div class="col-sm-6">
-        <iframe src="{{url_for('plot', name='metrics_chart')}}" frameborder=0 style="width: 100%; height:35em; "></iframe>
+        <iframe src="{{url_for('plot', name='coffee_table')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain;"></iframe>
       </div>
       <div class="col-sm-6">
-        <iframe src="{{url_for('plot', name='metrics_chart')}}" frameborder=0 style="width: 100%; height:35em; "></iframe>
+        <iframe src="{{url_for('plot', name='plot_coffee_1')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain;"></iframe>
       </div>
     </div>
 
     <div class="row" style="margin-top: 2em;">
       <div class="col-sm-6">
-        <iframe src="{{url_for('plot', name='metrics_chart')}}" frameborder=0 style="width: 100%; height:35em; "></iframe>
+        <iframe src="{{url_for('plot', name='plot_coffee_2')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain; "></iframe>
       </div>
       <div class="col-sm-6">
-        <iframe src="{{url_for('plot', name='metrics_chart')}}" frameborder=0 style="width: 100%; height:35em; "></iframe>
+        <iframe src="{{url_for('plot', name='plot_coffee_3')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain; "></iframe>
       </div>
     </div>
 
@@ -281,8 +281,8 @@ h2 {
   </div>
 
   <div id="div_result_coffee" style="display: none">
-    <h2>Result for coffee shops</h2>
-    <iframe src="{{url_for('plot', name='coffee_shops')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    <h2>Recommendation for coffee shops</h2>
+    <iframe src="{{url_for('plot', name='c_coffee')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
     margin-right: auto; "></iframe>
   </div>
 
@@ -293,17 +293,36 @@ h2 {
 <div id="div_banks" style="display: none">
 
   <div id="div_data_banks">
-    <h2>Data for banks</h2>
-    <iframe src="{{url_for('plot', name='banks_map')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    <h2>Data observation for banks</h2>
+    <iframe src="{{url_for('plot', name='banks')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
     margin-right: auto; "></iframe>
   </div>
 
   <div id="div_model_banks" style="display: none">
-    <h2>Model</h2>
+    <h2>Models comparison</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='bank_table')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain;"></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_bank_1')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain;"></iframe>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 2em;">
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_bank_2')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain; "></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_bank_3')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain; "></iframe>
+      </div>
+    </div>
   </div>
 
   <div id="div_result_banks" style="display: none">
-    <h2>Result</h2>
+    <h2>Recommendation for banks</h2>
+    <iframe src="{{url_for('plot', name='c_bank')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    margin-right: auto; "></iframe>
   </div>
 
 
@@ -314,17 +333,38 @@ h2 {
 
 <div id="div_restaurants" style="display: none">
 
-  <h2> Restaurants </h2>
+
   <div id="div_data_restaurants">
-    <h2>Data</h2>
+    <h2>Data observation for restaurants </h2>
+    <iframe src="{{url_for('plot', name='restic')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    margin-right: auto; "></iframe>
   </div>
 
   <div id="div_model_restaurants" style="display: none">
-    <h2>Model</h2>
+    <h2>Models comparison</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='rest_table')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain;"></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_rest_1')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain;"></iframe>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 2em;">
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_rest_2')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain; "></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_rest_3')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain; "></iframe>
+      </div>
+    </div>
   </div>
 
   <div id="div_result_restaurants" style="display: none">
-    <h2>Result</h2>
+    <h2>Recommendation for restaurants</h2>
+    <iframe src="{{url_for('plot', name='c_rest')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    margin-right: auto; "></iframe>
   </div>
 
 
@@ -333,17 +373,40 @@ h2 {
 <!-- Grocery --------------------------------------- -->
 <div id="div_grocery" style="display: none">
 
-  <h2> Grocery </h2>
+
   <div id="div_data_grocery">
-    <h2>Data</h2>
+    <h2>Data observation for groceries </h2>
+    <iframe src="{{url_for('plot', name='grocery')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    margin-right: auto; "></iframe>
+
+
   </div>
 
   <div id="div_model_grocery" style="display: none">
-    <h2>Model</h2>
+    <h2>Models comparison</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='groc_table')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain;"></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_groc_1')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain;"></iframe>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 2em;">
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_groc_2')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain; "></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe src="{{url_for('plot', name='plot_groc_3')}}" frameborder=0 style="width: 100%; height:35em; object-fit: contain; "></iframe>
+      </div>
+    </div>
   </div>
 
   <div id="div_result_grocery" style="display: none">
-    <h2>Result</h2>
+    <h2>Recommendation for grocery</h2>
+    <iframe src="{{url_for('plot', name='c_groc')}}" frameborder=0 style=" width: 95%; height: 50em; display: block; margin-left: auto;
+    margin-right: auto; "></iframe>
   </div>
 
 
