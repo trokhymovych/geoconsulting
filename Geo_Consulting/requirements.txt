@@ -12,7 +12,7 @@ Flask-Compress==1.4.0
 graphviz==0.8.4
 idna==2.8
 implicit==0.3.8
-ipython==7.3.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 itsdangerous==1.1.0
 jedi==0.13.3
